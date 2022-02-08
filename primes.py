@@ -2,12 +2,13 @@ import  numpy as np
 from matplotlib import pyplot as plt
 
 def prime(n): # Function for checking if a number is a prime number
-	if n in (0,1):
+	if n in (0, 1):
 		return False
-	counter=0
+    
+	counter = 0
 	
-	for each in range(2, n):
-		if n % each == 0:   
+	for i in range(2, n):
+		if n % i == 0:   
 			counter += 1
 	
 	if counter == 0:
@@ -46,11 +47,14 @@ Input the maximum value:
     """)
 
     a = input()
-
-    if int(a) <= 0:
-        print('Number is invalid!\n')
+    try:
+        if int(a) <= 0:
+            print('Number is invalid!\n')
+            main()
+        else:
+            arange(int(a))
+    except ValueError:
+        print('The number is invalid!\n')
         main()
-    else:
-        arange(int(a))
 
 main()
