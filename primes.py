@@ -18,22 +18,22 @@ def prime(n): # Function for checking if a number is a prime number
 
 def arange(a): # Arange the primes in the correct places
     primes = []
-    for i in range(a):
+    for i in range(a): # Iterates trough numbers from 0 to a, and appending all the primes into the primes array
         if(prime(i)):
             primes.append(i)
     
     print(f"Here are all the primes: {primes}")
 
-    plt.axes(projection = 'polar')
+    plt.axes(projection = 'polar') # Setting up the axes for polar projection
 
-    for i in range(len(primes)):
+    for i in range(len(primes)): # Placing the primes
         x = np.arange(primes[i])
         plt.polar(x, x, 'g.')
 
     plt.title(f"Primes of a max value of {a} on a polar graph", fontweight="bold") # Title
     plt.show() # Rendering
 
-def main():
+def main(): # Main function with ASCII art and input
     print("""
  ____       _                 ____                 _               
 |  _ \ _ __(_)_ __ ___   ___ / ___|_ __ __ _ _ __ | |__   ___ _ __ 
