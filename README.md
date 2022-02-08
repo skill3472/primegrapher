@@ -1,0 +1,2 @@
+## PrimeGrapher
+PrimeGrapher is a simple tool I made to show prime numbers on a polar plane. Feel free to use it and modify it. The requirements to use it are numpy and matplotlib, which you can install using pip.
